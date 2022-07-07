@@ -2,9 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Simple Form</title>
+    <title>Simple Table</title>
 </head>
+<style>
+    body{background: lightcyan}
+    form{color: blue ; margin-bottom: 10px}
+</style>
 <body>
-<strong><i><u>CodeGym Career</u></i></strong>
+ <form action="/action_page" method="post">
+     <fieldset>
+         <legend style="font-size: 30px">Sở thích của bạn</legend>
+         Họ và tên:<br/>
+         <input type="text" name="name" ><br><br/>
+         Email:<br/>
+         <input type="text" name="email" ><br><br/>
+         Sở thích:<br>
+         <label><input type="checkbox" name="hobby" value="sport">Thể thao</label>
+         <label><input type="checkbox" name="hobby" value="music">Nghe nhạc</label>
+         <label><input type="checkbox" name="hobby" value="read_book">Đọc sách</label><br><br/>
+         <label><input type="checkbox" name="hobby" value="sport">Lướt web</label>
+         <label><input type="checkbox" name="hobby" value="sport">Chơi game</label>
+         <label><input type="checkbox" name="hobby" value="sport">Điện ảnh</label><br><br/>
+         <label><input type="checkbox" name="hobby" value="sport">Du lịch</label>
+         <label><input type="checkbox" name="hobby" value="sport">Xem phim</label><br><br/>
+         <input type="submit" value="Gửi thông tin">
+         <input type="reset" value="Nhập lại">
+     </fieldset>
+ </form>
+<form action="/action_page" method="post">
+    <fieldset>
+        <legend style="font-size: 30px">Đăng ký học viên</legend>
+        <label for="name">Họ và tên</label><br>
+            <input type="text" id="name" name="name" ><br><br/>
+        <label for="date">Ngày sinh</label><br>
+            <input type="date" id="date" name="date" max="30-12-2023" ><br><br/>
+        <label for="sex">Giới tính</label><br>
+            <input type="radio" id="sex" name="sex">Nam
+            <input type="radio" id="sex" name="sex">Nữ<br><br/>
+        Địa chỉ<br/>
+            <textarea cols="50" rows="4"> </textarea><br><br/>
+        <label for="class">Lớp</label>
+        <select id="class" name="class">
+            <option value="english">English</option>
+            <option value="math">Math</option>
+            <option value="physic">Physic</option>
+            <option value="chemistry">Chemistry</option>
+        </select><br><br/>
+        <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" ><br><br/>
+        <label for="tel">Số điện thoại</label><br>
+            <input type="tel" id="tel" name="tel" ><br><br/>
+        <input type="submit" value="Đăng ký">
+        <input type="reset" value="Nhập lại">
+    </fieldset>
+</form>
 </body>
 </html>

@@ -20,8 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b189213-5f97-48b7-8121-75d749f8d864" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bai_tap/tao_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thuc_hanh/su_dung_the_html_basic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_tap/dang_ky_nguoi_dung.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_tap/table_basic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thuc_hanh/google_search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thuc_hanh/simple_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/tao_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/tao_form.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +71,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657208747025</updated>
-      <workItem from="1657208748488" duration="1902000" />
+      <workItem from="1657208748488" duration="12923000" />
+      <workItem from="1657225135859" duration="4745000" />
     </task>
     <servers />
   </component>
@@ -84,8 +89,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="541" y="247" key="#Notifications" timestamp="1657225093168">
+      <screen x="0" y="0" width="1312" height="768" />
+    </state>
+    <state x="541" y="247" key="#Notifications/0.0.1312.768@0.0.1312.768" timestamp="1657225093168" />
     <state x="110" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1657212955367">
       <screen x="0" y="0" width="1312" height="768" />
     </state>
