@@ -5,56 +5,53 @@
     <title>Simple Table</title>
 </head>
 <style>
-    body{background: lightcyan}
-    form{color: blue ; margin-bottom: 10px}
+    
+    body, form{color: blue; background: lightcyan}
 </style>
 <body>
- <form action="/action_page" method="post">
-     <fieldset>
-         <legend style="font-size: 30px">Sở thích của bạn</legend>
-         Họ và tên:<br/>
+
+ <form action="/action_page" method="post" style="background: white; text-align: center">
+     <h1 style="background-color: orangered; color: white">Sở thích của bạn</h1>
+         Họ và tên:
          <input type="text" name="name" ><br><br/>
-         Email:<br/>
-         <input type="text" name="email" ><br><br/>
-         Sở thích:<br>
+         Email:
+         <input type="text" name="email" style="margin-left: 25px"><br><br/>
+         <label style="margin-left: 6%">Sở thích:</label>
          <label><input type="checkbox" name="hobby" value="sport">Thể thao</label>
          <label><input type="checkbox" name="hobby" value="music">Nghe nhạc</label>
          <label><input type="checkbox" name="hobby" value="read_book">Đọc sách</label><br><br/>
-         <label><input type="checkbox" name="hobby" value="sport">Lướt web</label>
+         <label><input style="margin-left: 12%" type="checkbox" name="hobby" value="sport">Lướt web</label>
          <label><input type="checkbox" name="hobby" value="sport">Chơi game</label>
          <label><input type="checkbox" name="hobby" value="sport">Điện ảnh</label><br><br/>
-         <label><input type="checkbox" name="hobby" value="sport">Du lịch</label>
+         <label><input style="margin-left: 4%" type="checkbox" name="hobby" value="sport">Du lịch</label>
          <label><input type="checkbox" name="hobby" value="sport">Xem phim</label><br><br/>
-         <input type="submit" value="Gửi thông tin">
-         <input type="reset" value="Nhập lại">
-     </fieldset>
- </form>
-<form action="/action_page" method="post">
-    <fieldset>
-        <legend style="font-size: 30px">Đăng ký học viên</legend>
-        <label for="name">Họ và tên</label><br>
+     <button value="submit">Nhập thông tin</button>
+     <button value="reset">Nhập lại</button>
+ </form><br><br/>
+<form action="/action_page" method="post" style="background: lightsalmon">
+    <h1 style="background-color: lightblue; color: blue; margin-left: 5px">Đăng ký học viên</h1>
+        <label for="name">Họ và tên</label>
             <input type="text" id="name" name="name" ><br><br/>
-        <label for="date">Ngày sinh</label><br>
+        <label for="date">Ngày sinh</label>
             <input type="date" id="date" name="date" max="30-12-2023" ><br><br/>
-        <label for="sex">Giới tính</label><br>
+        <label for="sex">Giới tính</label>
             <input type="radio" id="sex" name="sex">Nam
-            <input type="radio" id="sex" name="sex">Nữ<br><br/>
-        Địa chỉ<br/>
-            <textarea cols="50" rows="4"> </textarea><br><br/>
+            <input type="radio" id="sex1" name="sex">Nữ<br><br/>
+        <label for="location">Địa chỉ</label>
+            <input type="text" id="location" name="location" style="padding: 25px; margin-left: 15px"><br><br/>
         <label for="class">Lớp</label>
-        <select id="class" name="class">
+        <select id="class" name="class" style="margin-left: 35px">
             <option value="english">English</option>
             <option value="math">Math</option>
             <option value="physic">Physic</option>
             <option value="chemistry">Chemistry</option>
         </select><br><br/>
-        <label for="email">Email</label><br>
-            <input type="email" id="email" name="email" ><br><br/>
-        <label for="tel">Số điện thoại</label><br>
+        <label for="email">Email</label>
+            <input type="email" id="email" name="email" style="margin-left: 20px" ><br><br/>
+        <label for="tel">Số điện thoại</label>
             <input type="tel" id="tel" name="tel" ><br><br/>
-        <input type="submit" value="Đăng ký">
-        <input type="reset" value="Nhập lại">
-    </fieldset>
+    <button value="submit">Đăng ký</button>
+    <button value="reset">Nhập lại</button>
 </form>
 </body>
 </html>
