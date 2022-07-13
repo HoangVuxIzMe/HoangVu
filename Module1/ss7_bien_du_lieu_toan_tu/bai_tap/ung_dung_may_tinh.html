@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+</head>
+<body>
+    <h1>Caculator</h1>
+    <form>
+        <input type="number" id="num1">
+        <input type="number" id="num2"><br><br/>
+        <button type="button" id="add" onclick="addtion();">Addition(+)</button>
+        <button type="button" id="sub" onclick="subtration();">Subtration(-)</button>
+        <button type="button" id="multi" onclick="multiplication();">Multiplication(x)</button>
+        <button type="button" id="div" onclick="divition();">Division(/)</button><br><br/>
+        <p id="result" ></p>
+    </form>
+    <script>
+        function addtion() {
+            const a = document.getElementById('num1').value
+            const b = document.getElementById('num2').value
+            var c = parseInt(a) + parseInt(b);
+            document.getElementById('result').innerHTML = 'Result Addition: ' + c;
+        }
+        function subtration() {
+            const a = document.getElementById('num1').value
+            const b = document.getElementById('num2').value
+            var c = parseInt(a) - parseInt(b);
+            document.getElementById('result').innerHTML = 'Result Subtration: ' + c;
+        }
+        function multiplication() {
+            const a = document.getElementById('num1').value
+            const b = document.getElementById('num2').value
+            var c = parseInt(a) * parseInt(b);
+            document.getElementById('result').innerHTML = 'Result Multiplication: ' + c;
+        }
+        function divition() {
+            const a = document.getElementById('num1').value
+            const b = document.getElementById('num2').value
+            var c = parseInt(a) / parseInt(b);
+            document.getElementById('result').innerHTML = 'Result Divition: ' + c;
+        }
+    </script>
+</body>
+</html>

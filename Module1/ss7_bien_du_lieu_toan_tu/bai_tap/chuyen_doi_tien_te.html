@@ -4,52 +4,56 @@
     <meta charset="UTF-8">
     <title>Chuyển đổi tiền tệ</title>
     <style>
-        body, table{
+       table{
             width: 100%;
-            text-align: left;
+            text-align: center;
         }
     </style>
 </head>
 <body>
+    <h2>Chuyển đổi tiền tệ</h2>
     <table>
         <tr>
             <th>Amount</th>
             <th>From Currency</th>
             <th>To Currency</th>
-            <th></th>
-        </tr>
-        <tr>
-            <td>
-                <form>
-                    <input type="text" id="count" >
-                </form>
-            </td>
-            <td>
-                <form>
-                    <select id="from">
-                        <option value="VietNam">Việt Nam</option>
-                        <option value="USD">USD</option>
-                    </select>
-                </form>
-            </td>
-            <td>
-                <form>
-                    <select id="to">
-                        <option value="VietNam">Việt Nam</option>
-                        <option value="USD">USD</option>
-                    </select>
-                </form>
-            </td>
-            <td><button type="button" onclick="tranferMoney();">Convert</button></td>
-        </tr>
-        <tr>
-            <td id="tranf">Result :</td>
         </tr>
     </table>
+    <form>
+        <input type="text" id="count" style="margin-left: 50px">
+        <select id="from" style="margin-left: 280px">
+            <option value="VietNam">Việt Nam</option>
+            <option value="USD">USD</option>
+        </select>
+        <select id="to" style="margin-left: 410px">
+            <option value="VietNam">Việt Nam</option>
+            <option value="USD">USD</option>
+        </select>
+        <button type="button" onclick="tranferMoney();" style="margin-left: 50px">Convert</button><br/>
+        <p id="result">Result: </p>
+    </form>
+
+
+
 </body>
     <script>
         function tranferMoney() {
-            var x = document.getElementById("count")
+            var x = document.getElementById("count").value
+            var vn = document.getElementById('from').value
+            var usd = document.getElementById('to').value
+            var donVi = " USD";
 
+            if(usd == 'VietNam') {
+                donVi = " VND";
+            }
+
+            if(vn == 'VietNam' && usd == 'USD'){
+                document.getElementById('result').innerHTML = 'Result: ' + x * 23000 + donVi;
+            }else if( vn == 'USD' && usd == 'VietNam'){
+                document.getElementById('result').innerHTML = 'Result: ' + x/23000 + donVi;
+            }else{
+                document.getElementById('result').innerHTML = 'Result: ' + x + donVi;
+            }
+        }
     </script>
 </html>
