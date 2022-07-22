@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+    <style>
+        body{
+            margin-left: 10%;
+        }
+    </style>
+</head>
+<body>
+<p id="displayWeight"></p>
+<p id="displayHeight"></p>
+<p id="displayBMI"></p>
+<p id="typePerson"></p>
+
+<script>
+    let a = prompt('Type your weight (Kg)');
+    document.getElementById('displayWeight').innerHTML = 'Cân nặng của bạn là: ' + a + 'Kg';
+    let b = prompt('Type your height (Cm) ')
+    document.getElementById('displayHeight').innerHTML = 'Chiều cao của bạn là: ' + b + 'cm';
+    let bmi = a / ((b^2)*100);
+
+    switch (bmi < 18.5 || 18.5 <= bmi && bmi < 25 || 25 <= bmi && bmi < 30 || 30 <= bmi) {
+        case bmi < 18.5:
+            result = 'Underweight';
+            break
+        case 18.5 <= bmi < 25:
+            result = 'Normal';
+            break
+        case 25 <= bmi < 30:
+            result = 'Normal';
+            break
+        case 30 <= bmi:
+            result = 'Normal';
+            break;
+    }
+    document.getElementById('displayBMI').innerText = 'Chỉ số BMI của bạn là ' + bmi;
+    document.getElementById('typePerson').innerText = 'Type : ' + result;
+</script>
+
+</body>
+</html>

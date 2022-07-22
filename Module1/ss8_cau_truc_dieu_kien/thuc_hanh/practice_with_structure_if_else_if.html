@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cấu trúc If/Else if</title>
+</head>
+<body>
+<h1>Đăng nhập tài khoản</h1>
+<form>
+    User Name:
+    <input type="text" id="account" style="margin-left: 20px"><br><br/>
+    Password:
+    <input type="password" id="passwork" style="margin-left: 30px"><br><br/>
+    <button type="button" onclick="login();">Login</button>
+    <p id="result"></p>
+</form>
+<script>
+    function login() {
+        var userName = document.getElementById('account').value
+        var pass = document.getElementById('passwork').value
+
+        if(userName == 'Admin' && pass == 'TheMaster'){
+            document.getElementById('result').innerHTML = 'Login Success!';
+        }else if (userName == null && pass == 'TheMaster'){
+            document.getElementById('result').innerHTML = 'Wrong Account!';
+        }else {
+            document.getElementById('result').innerHTML = 'Wrong Passwork!';
+        }
+    }
+</script>
+</body>
+</html>
