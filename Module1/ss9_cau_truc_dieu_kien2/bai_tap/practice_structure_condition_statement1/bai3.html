@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+    <style>
+        body{
+            margin-left: 5%;
+        }
+    </style>
+</head>
+<body>
+<p id="result"></p>
+</body>
+<script>
+    var num = parseInt(prompt('Nhập số nguyên'));
+
+    if(num > 0){
+        document.getElementById('result').innerText = 'Số bạn vừa nhập lớn hơn 0';
+    }else{
+        document.getElementById('result').innerText = 'Số bạn vừa nhập nhỏ hơn 0';
+    }
+</script>
+</html>

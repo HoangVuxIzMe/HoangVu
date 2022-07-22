@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+</body>
+<script>
+    let a = parseInt(prompt(' Nhập số tiền bán được'))
+
+    // Doanh số trên 1tr và dưới 10tr thì nhận được hoa hồng 1%
+    if (a >= 1000000 && a <= 10000000){
+        alert('Số tiền hoa hồng nhận được: ' + a/100 + ' VND');
+     // Doanh số trên 10tr thì nhận được hoa hồng 3%
+    }else if (a > 10000000){
+        alert('Số tiền hoa hồng nhận được: '+ (a*3)/100 + 'VND') ;
+    }else {
+        alert('Doanh số bán hàng của bạn không đủ chỉ tiêu, bạn không được nhận hoa hồng của tháng')
+    }
+</script>
+</html>

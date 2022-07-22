@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+</body>
+<script>
+    let soPhut = parseInt(prompt('Nhập số phút gọi: '))
+    let soGio = soPhut/60;
+    // Nếu số giờ gọi trên 5 giờ dưới 10 giờ cước 10K Vnd/giờ
+    if (soGio >= 5 && soGio < 10 ){
+        alert('Tiền cước điện thoại tháng này của bạn là: ' + soGio*10000 + ' VND');
+    // Nếu số giờ gọi trên 10 giờ giá cước 7k Vnd/giờ
+    }else if(soGio > 10){
+        alert('Tiền cước điện thoại tháng này của bạn là: ' + soGio*7000 + ' VND');
+    // Nếu số giờ gọi dưới 5 giờ giá cước 12.000đ/giờ
+    }else {
+        alert('Tiền cước điện thoại tháng này của bạn là: ' + soGio*12000 + ' VND')
+    }
+</script>
+</html>

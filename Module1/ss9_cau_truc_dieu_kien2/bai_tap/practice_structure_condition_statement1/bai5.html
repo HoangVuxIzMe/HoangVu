@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = parseInt(prompt(' Nhập điểm bài tập'));
+    let b = parseInt(prompt(' Nhập điểm giữa kỳ'));
+    let c = parseInt(prompt(' Nhập điểm cuối kỳ'));
+    let diemTrungBinh = (a + b + c)/3;
+
+    if(diemTrungBinh >= 8){
+        alert('Học lực: Loại Giỏi');
+    }else if(diemTrungBinh >= 4 && diemTrungBinh < 8){
+        alert('Học lực: Loại Trung Bình');
+    }else {
+        alert('Học lực: Loại Yếu');
+    }
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+    <style>
+        body{
+            margin-left: 5%;
+        }
+    </style>
+</head>
+<body>
+<p id="result"></p>
+</body>
+<script>
+    var a = parseInt(prompt(' '));
+    var b = parseInt(prompt(' '));
+    var c = a % b;
+
+    if(c === 0){
+        document.getElementById('result').innerText = a + ' chia hết cho ' + b;
+    }else {
+        document.getElementById('result').innerText = a + ' không chia hết cho ' + b;
+    }
+</script>
+</html>
