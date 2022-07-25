@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<form>
+    <label>Nhập nhiệt độ: </label>
+    <input type="number" id="nhietDo">
+    <select id="cot1">
+        <option value="°C">°C</option>
+        <option value="°F">°F</option>
+    </select>
+    <label>- Chuyển đổi thành -</label>
+    <select id="cot2">
+        <option value="°C">°C</option>
+        <option value="°F">°F</option>
+    </select><br><br/>
+    <button type="button" onclick="tranf()">Tranfer</button>
+    <p id="result"></p>
+</form>
+</body>
+<script>
+    function tranf() {
+        let nhietDo = document.getElementById('nhietDo').value;
+        let cot1 = document.getElementById('cot1').value;
+        let cot2 = document.getElementById('cot2').value;
+
+        if (cot1 == '°C' && cot2 == '°F'){
+            document.getElementById('result').innerText = 'Nhiệt độ: '+ (nhietDo * (9/5) + 32) + ' ° C';
+        }else  if (cot1 == '°F' && cot2 == '°C'){
+            document.getElementById('result').innerText = 'Nhiệt độ: '+ ((nhietDo - 32) *(5/9)) + ' ° F';
+        }else if (cot1 == '°F' && cot2 == '°F'){
+            document.getElementById('result').innerText = 'Nhiệt độ: '+ nhietDo + ' ° F';
+        }else {
+            document.getElementById('result').innerText = 'Nhiệt độ: '+ nhietDo + ' ° C';
+        }
+    }
+</script>
+</html>

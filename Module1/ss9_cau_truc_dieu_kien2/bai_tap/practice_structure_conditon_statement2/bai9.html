@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+</body>
+<script>
+ let a = parseFloat(prompt('Nhập a: '));
+ let b = parseFloat(prompt('Nhập b: '));
+ let c = parseFloat(prompt('Nhập c: '));
+
+ let tong_ab = a + b;
+ let tong_bc = c + b;
+ let tong_ac = a + c;
+
+ let kq = 'a,b,c là 3 cạnh của tam giác';
+
+ if (a > 0 && b > 0 && c > 0 && tong_ab >= c && tong_bc >= a && tong_ac >= b){
+        alert(kq)
+    }else {
+     alert('a,b,c không phải là cạnh của tam giác')
+     }
+</script>
+</html>

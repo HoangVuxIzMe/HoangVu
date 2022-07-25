@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 10</title>
+</head>
+<body>
+<h2>Bảng giá tiền điện</h2><br>
+<p>Bậc 1 (0 đến 50kWh): 1.678 đồng/kWh.<br>
+    Bậc 2 (51 đến 100kWh): 1.734 đồng/kWh.<br>
+    Bậc 3 (101 đến 200 kWh): 2.014 đồng/kWh.<br>
+    Bậc 4 (201 đến 300 kWh): 2.536 đồng/kWh.<br>
+    Bậc 5 (301 đến 400 kWh): 2.834 đồng/kWh.<br>
+    Bậc 6 (401 kWh trở lên): 2.927 đồng/kWh.</p><br>
+<input type="number" id="tienDien" value="Nhập số khối điện (kWh): ">
+<button type="button" onclick="tinh_tien_dien();">Result</button>
+<p id="result"></p>
+</body>
+<script>
+    function tinh_tien_dien() {
+        let tienDien = document.getElementById('tienDien').value;
+
+        if (tienDien > 0 && tienDien < 50){
+            document.getElementById('result').innerText = 'Tiện điện của bạn thuộc bậc 1: ' + tienDien*1678 + ' VND';
+        }else if (tienDien >= 50 && tienDien < 100){
+            document.getElementById('result').innerText = 'Tiện điện của bạn thuộc bậc 2: ' + tienDien*1734 + ' VND';
+        }else if (tienDien >= 100 && tienDien < 200){
+            document.getElementById('result').innerText = 'Tiện điện của bạn thuộc bậc 3: ' + tienDien*2014 + ' VND';
+        }else if (tienDien >= 200 && tienDien < 300){
+            document.getElementById('result').innerText = 'Tiện điện của bạn thuộc bậc 4: ' + tienDien*2536 + ' VND';
+        }else if (tienDien >= 300 && tienDien < 400){
+            document.getElementById('result').innerText = 'Tiện điện của bạn thuộc bậc 5: ' + tienDien*2834 + ' VND';
+        }else if (tienDien > 400){
+            document.getElementById('result').innerText = 'Tiện điện của bạn thuộc bậc 6: ' + tienDien*2927 + ' VND';
+        }else {
+            document.getElementById('result').innerText = 'Số bạn nhập sai, vui lòng nhập lại!!';
+        }
+    }
+</script>
+</html>

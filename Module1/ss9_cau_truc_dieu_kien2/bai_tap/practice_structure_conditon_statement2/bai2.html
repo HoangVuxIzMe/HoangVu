@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<form>
+    <label>Nhập độ dài: </label>
+    <input type="number" id="doDai">
+    <select id="cot1">
+        <option value="m">m</option>
+        <option value="ft">ft</option>
+    </select>
+    <label>- Chuyển đổi thành -</label>
+    <select id="cot2">
+        <option value="ft">ft</option>
+        <option value="m">m</option>
+    </select><br><br/>
+    <button type="button" onclick="tranf()">Tranfer</button>
+    <p id="result"></p>
+</form>
+</body>
+<script>
+    function tranf() {
+        let doDai = document.getElementById('doDai').value;
+        let cot1 = document.getElementById('cot1').value;
+        let cot2 = document.getElementById('cot2').value;
+
+        if (cot1 == 'm' && cot2 == 'ft'){
+            document.getElementById('result').innerText = 'Độ dài: '+ (doDai * 3.2808) + ' ft';
+        }else  if (cot1 == 'ft' && cot2 == 'm'){
+            document.getElementById('result').innerText = 'Độ dài: '+ (doDai / 3.2808) + ' m';
+        }else if (cot1 == 'ft' && cot2 == 'ft'){
+            document.getElementById('result').innerText = 'Độ dài: '+ doDai + ' ft';
+        }else {
+            document.getElementById('result').innerText = 'Độ dài: '+ doDai + ' m';
+        }
+    }
+</script>
+</html>

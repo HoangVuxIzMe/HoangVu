@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 12</title>
+</head>
+<body>
+<script>
+    let tienGui = parseInt(prompt('Nhập số tiền gửi: '));
+    let laiSuat = parseFloat(prompt('Nhập lãi suất hàng tháng: '));
+    let soThang = parseInt(prompt('Nhập số tháng gửi: '))
+
+    for (let i = 0; i < soThang; i++){
+        tienGui += tienGui*laiSuat;
+    }
+
+    alert('Tổng tiền cần trả là: ' + tienGui);
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 11</title>
+</head>
+<body>
+<h2>Bảng giá thuế thu nhập/tháng</h2><br>
+<p>Bậc 1 (14tr đến 25tr): 10%.<br>
+    Bậc 2 (25tr đến 52tr): 15%.<br>
+    Bậc 3 (52tr đến 80tr): 20%.<br>
+    Bậc 4 (trên 80tr): 25%.</p><br>
+<input type="number" id="tienThue" value="Nhập số tiền thu nhập (tr): ">
+<button type="button" onclick="tinh_tien_thue();">Result</button>
+<p id="result"></p>
+</body>
+<script>
+    function tinh_tien_thue() {
+        let tienThue = document.getElementById('tienThue').value;
+
+        if (tienThue > 0 && tienThue < 14){
+            document.getElementById('result').innerText = 'Tiền thu nhập của bạn không đủ để phải trả thuế';
+        }else if (tienThue >= 14 && tienThue < 25){
+            document.getElementById('result').innerText = 'Tiện thuế phải đóng của bạn thuộc bậc 1: ' + tienThue*0.1 + 'tr VND';
+        }else if (tienThue >= 25 && tienThue < 52){
+            document.getElementById('result').innerText = 'Tiện thuế phải đóng của bạn thuộc bậc 2: ' + tienThue*0.15 + 'tr VND';
+        }else if (tienThue >= 52 && tienThue < 80){
+            document.getElementById('result').innerText = 'Tiện thuế phải đóng của bạn thuộc bậc 3: ' + tienThue*0.2 + 'tr VND';
+        }else if (tienThue >= 80){
+            document.getElementById('result').innerText = 'Tiện thuế phải đóng của bạn thuộc bậc 4: ' + tienThue*0.25 + 'tr VND';
+        }else {
+            document.getElementById('result').innerText = 'Số bạn nhập sai, vui lòng nhập lại!!';
+        }
+    }
+</script>
+</html>
