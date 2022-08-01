@@ -46,9 +46,9 @@
             }
 
             if(vn == 'VietNam' && usd == 'USD'){
-                document.getElementById('result').innerHTML = 'Result: ' + x * 23000 + donVi;
+                document.getElementById('result').innerHTML = 'Result: ' + x / 23000 + donVi;
             }else if( vn == 'USD' && usd == 'VietNam'){
-                document.getElementById('result').innerHTML = 'Result: ' + x/23000 + donVi;
+                document.getElementById('result').innerHTML = 'Result: ' + x*23000 + donVi;
             }else{
                 document.getElementById('result').innerHTML = 'Result: ' + x + donVi;
             }

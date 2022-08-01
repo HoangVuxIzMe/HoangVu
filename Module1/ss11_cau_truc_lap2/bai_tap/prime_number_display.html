@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+</body>
+<script>
+    /*let n = prompt('Nhập số muốn kiểm tra');
+
+    for (let i = 2; i <= n; i++){
+        if (n % i == 0){
+            alert(n + ' là số nguyên tố')
+        }else {
+            alert('Không phải là số nguyên tố')
+        }
+    }*/
+
+    let size = prompt('Số lượng số hiển thị: ');
+    let n = 2;
+    let count = 0;
+
+    while (count < size){
+        let flag = true;
+        for (let i = 2; i < n; i++) {
+            if (n % i == 0) {
+                flag = false;
+                // count++
+                break;
+            }
+        }
+        if (flag){
+            document.write(n + '<br>');
+            count++;
+        }
+        n++;
+    }
+
+</script>
+</html>

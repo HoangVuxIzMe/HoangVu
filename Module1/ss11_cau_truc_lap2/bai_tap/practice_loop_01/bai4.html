@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+</body>
+<script>
+    let num1 = 1;
+    let num2 = 1;
+    let sum = 0
+    let size = prompt('nhập khoảng bao nhiêu số');
+
+    for (let i = 1;i <= size;i++){
+        if (num1 % 5 == 0){
+            document.write(num1);
+            break;
+        }
+        sum = num1 + num2;
+        num1 = num2;
+        num2 = sum;
+    }
+</script>
+</html>
