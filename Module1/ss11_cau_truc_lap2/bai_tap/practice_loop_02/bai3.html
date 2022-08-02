@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+</body>
+<script>
+    let star1 = '*****';
+
+    // Sao trái phải
+    for (let i = 1; i <= 5; i++){
+        document.write(star1.substring(0, i) + '<br>');
+    }
+    // Sao ngược
+    document.write("<br>");
+    for (let i = 5; i >= 0; i--){
+        document.write(star1.substring(i, 0) + '<br>');
+    }
+
+    // Sao phải trái
+    let star = "\xa0\xa0";
+    for (let i =0; i <= 5; i++) {
+        for (let j = 0; j <= 4; j++) {
+            if (j < 5 - i) {
+                document.write(star);
+            } else {
+                document.write("*");
+            }
+        }
+        document.write("<br>");
+    }
+
+    // Sao ngược
+    document.write("<br>");
+    for (let i =0; i <= 5; i++) {
+        for (let j = 0; j <= 4; j++) {
+            if (j >= i) {
+                document.write("*");
+            } else {
+                document.write(star);
+            }
+        }
+        document.write("<br>");
+    }
+
+
+
+</script>
+</html>

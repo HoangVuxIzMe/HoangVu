@@ -9,17 +9,16 @@
 <script>
     let count = 0;
     let n = 0;
-    let sum;
+    let sum = 0;
 
-    while(count < 5){
+    while(count < 29){
         if(n % 7 == 0){
+            sum += n;
             count++;
         }
-        document.write(n + '<br>');
         n++;
-
     }
-
+    document.write(sum + '<br>');
 
 
 </script>
