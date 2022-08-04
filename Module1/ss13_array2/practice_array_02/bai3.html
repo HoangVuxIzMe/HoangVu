@@ -7,6 +7,21 @@
 <body>
 </body>
 <script>
+    let arrNum = [
+            [1, 2, 1, 24],
+            [8, 11, 9, 4],
+            [7, 0, 7, 27,6],
+            [7, 4, 28, 14],
+            [3, 10, 26, 7,3,2,21,4]
+    ];
+    let count = 0;
 
+    document.write('Mảng ban đầu: ' + arrNum);
+    for(let i = 0; i < arrNum.length; i++){
+        for(let j = 0; j < arrNum[i].length; j++){
+            count++;
+        }
+    }
+    document.write('Mảng có số ký tự là: ' + count);
 </script>
 </html>

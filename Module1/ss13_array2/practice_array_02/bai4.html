@@ -7,6 +7,24 @@
 <body>
 </body>
 <script>
+    let textString = prompt('Nhập vào chuỗi ký tự: ').toString();
+    let arrText = [''];
+    let count = 1;
 
+//tách chuỗi ký tự
+    for (let i = 0; i < textString.length; i++) {
+        arrText[i] = textString.charAt(i);
+    }
+
+// đếm số từ
+    for (let i = 0; i < arrText.length; i++) {
+        if(arrText[i] === ' ' && arrText[i + 1] !== ' '){
+            count++
+        }
+    }
+
+    document.write('Chuỗi ban đầu: ' + textString + '<br>');
+    document.write('Chuỗi sau: ' + arrText.join(', ') + '<br>');
+    document.write('Số ký tự là: ' + count);
 </script>
 </html>

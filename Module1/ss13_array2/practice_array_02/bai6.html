@@ -7,6 +7,24 @@
 <body>
 </body>
 <script>
+    let textString = prompt('Nhập vào chuỗi ký tự: ').toString();
+    let arrText = [''];
+    let temp = '';
 
+    //tách chuỗi ký tự
+    for (let i = 0; i < textString.length; i++) {
+        arrText[i] = textString.charAt(i);
+    }
+
+    // thay ký tự
+    for (let i = 0; i < arrText.length; i++) {
+        if(arrText[i] === '-'){
+            arrText[i] = '_'
+        }
+        temp += arrText[i];
+    }
+
+    document.write('Mảng nhập vào: ' + textString + '<br>');
+    document.write('Mảng sửa đổi: ' + temp);
 </script>
 </html>

@@ -7,6 +7,41 @@
 <body>
 </body>
 <script>
+    let arrA = [
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27,6],
+        [7, 4, 28, 14],
+        [3, 10, 26, 7,3,2,21,4]
+    ];
+    let arrB = [
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27,6],
+        [7, 4, 28, 14],
+        [3, 10, 26, 7,3,2,21,4]
+    ];
+    document.write(arrA + '<br>');
+    document.write(arrB + '<br>');
+    let arrA_value = '';
+    let arrB_value = '';
 
+    for (let i = 0; i < arrA.length; i++) {
+        for (let j = 0; j < arrA[i].length; j++) {
+            arrA_value += arrA[i][j];
+        }
+    }
+
+    for (let i = 0; i < arrB.length; i++) {
+        for (let j = 0; j < arrB[i].length; j++) {
+            arrB_value += arrB[i][j];
+        }
+    }
+
+    if (arrA_value == arrB_value){
+        document.write('2 mảng đã cho giống nhau')
+    }else {
+        document.write('2 mảng đã cho không giống nhau')
+    }
 </script>
 </html>
