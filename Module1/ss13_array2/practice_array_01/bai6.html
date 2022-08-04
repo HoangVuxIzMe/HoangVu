@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+</body>
+<script>
+    let arrNum = [11, 21, 43, 2, 5, 10, 89, 78, 9, 56];
+    let numV = +prompt("Nhập số cần kiểm tra: ");
+    let flag = false;
+    // let count = 0;
+
+    for (let i = 0; i < arrNum.length; i++) {
+        if (arrNum[i] === numV){
+            flag = true;
+        }
+    }
+    if (flag){
+        document.write("V is in the array");
+    }else {
+        document.write("V is not in the array");
+    }
+</script>
+</html>

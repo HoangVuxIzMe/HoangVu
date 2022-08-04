@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+</body>
+<script>
+    let arrNum = [11, 21, 43, 2, 5, 10, 89, 78, 9, 56];
+    let numV = +prompt("Nhập số cần kiểm tra: ");
+
+    for (let i = 0; i < arrNum.length; i++) {
+        if (arrNum[i] === numV){
+            arrNum.splice(i, 1);
+            arrNum.push("0")
+            document.write(arrNum.join(', '))
+        }
+        // chưa có cách ktr trường hợp ngược
+    }
+</script>
+</html>

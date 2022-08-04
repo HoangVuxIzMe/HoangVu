@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+</body>
+<script>
+    let arrNum = [11, 21, 43, -2, 5, 10, 89, -78, 9, 56];
+    let arrNumNew = [];
+    let min = arrNum[0];
+    let max = arrNum[0];
+    let number = 0;
+
+    for (let i = 0; i < arrNum.length; i++){
+        if (arrNum[i] < min){
+            min = arrNum[i];
+        }
+    }
+
+    document.write("Dãy ban đầu: " + arrNum.join(', ') + "<br>");
+
+    for (let i = 0; i < arrNum.length ; i++) {
+        for (let j = 0; j < arrNum.length; j++) {
+            if(arrNum[j] > max){
+                max = arrNum[j];
+            }
+        }
+        for (let j = 0; j < arrNum.length; j++) {
+            if (arrNum[j] === max){
+                number = j;
+            }
+        }
+        arrNum[number] = min;
+        arrNumNew[arrNumNew.length] = max;
+        max = arrNum[0];
+    }
+
+    document.write("Dãy mới: " + arrNumNew.join(', '));
+
+</script>
+</html>

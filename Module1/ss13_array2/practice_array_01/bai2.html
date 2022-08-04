@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+</body>
+<script>
+    let arrNum = [11, 21, 43, 2, 5, 10, 89, 78, 9, 56];
+    let max = arrNum[0];
+
+    for (let i = 1; i < arrNum.length; i++) {
+        if (arrNum[i] > max){
+            max = arrNum[i];
+        }
+    }
+    for (let i = 0; i < arrNum.length; i++) {
+        if (arrNum[i] === max){
+            document.write("Giá trị thứ " + i + " kết quả: " + max);
+        }
+    }
+</script>
+</html>

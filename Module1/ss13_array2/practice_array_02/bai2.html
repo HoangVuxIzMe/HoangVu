@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+</body>
+<script>
+    let arrNum = [ 'c', 's', 'c', '2', '6', '1' ];
+    document.write("Mảng ban đầu: " + arrNum.toString() + "<br>");
+    let arrNumNew = [];
+
+    for (let i = 0; i < arrNum.length / 2; i++) {
+        let temp = arrNum[i];
+        arrNum[i] = arrNum[5 - j];
+        arrNum[5 - j] = temp;
+    }
+    for (let i = 0; i < arrNum.length; i++) {
+        document.write("Mảng mới: " + arrNum);
+    }
+
+    //Vòng lặp for không hàm
+    // for (let i = 0, j = arrNum.length - 1; i < j; i++, j--) {
+    //         let temp = arrNum[i];
+    //         arrNum[i] = arrNum[j];
+    //         arrNum[j] = temp;
+    // }
+    // document.write("Mảng mới: " + arrNum);
+
+    //Vòng lặp for + hàm push
+    // for (let i = arrNum.length - 1; i >= 0; i--) {
+    //         arrNumNew.push(arrNum[i]);
+    // }
+    //document.write("Mảng mới: " + arrNumNew);
+
+    //Sử dụng hàm reverse()
+    // document.write("Mảng mới: " + arrNum.reverse());
+
+</script>
+</html>

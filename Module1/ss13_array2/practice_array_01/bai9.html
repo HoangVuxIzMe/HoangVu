@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+</body>
+<script>
+    let arrNumA = [10,9,8,7,6,5,4,3,2,1];
+    let arrNumB = [11,12,13,14,15,16,17,18,19,20];
+    let arrNumC = new Array(20);
+
+    for (let i = 0; i < arrNumA.length; i++) {
+        arrNumC[i]=arrNumA[i];
+    }
+    for (let j = 0; j < arrNumB.length; j++) {
+        arrNumC[10 + j] = arrNumB[j];
+
+    }
+    alert(arrNumC);
+</script>
+</html>
