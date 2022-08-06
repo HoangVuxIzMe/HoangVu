@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Foot_Meter</title>
+</head>
+<body>
+Nhập số bạn cần chuyển đổi: <br>
+<select id="tranfer">
+    <option value="tranferFM" >Feet - Meters</option>
+    <option value="tranferMF">Meters - Feet</option>
+</select>
+<input type="number" id="input" oninput="display()"> <br/>
+<span id="result"></span>
+</body>
+<script>
+    function footToMeter(number) {
+        feet = number * 0.305;
+        return result;
+    }
+    function meterToFoot(number) {
+        meter = number * 3.279;
+        return result;
+    }
+    function display() {
+        let input = document.getElementById('input').value;
+        let tranfer = document.getElementById('tranfer').value;
+        if (tranfer == 'tranferFM'){
+            meterToFoot(input);
+            document.getElementById('result').innerText = 'Số bạn nhập là: ' + input + ' (Meters) - ' + meter + ' (Feet)';
+        }
+        if (tranfer == 'tranferMF'){
+            footToMeter(input);
+            document.getElementById('result').innerText = 'Số bạn nhập là: ' + input + ' (Feet) - ' + feet + ' (Meter)';
+        }
+    }
+</script>
+</html>

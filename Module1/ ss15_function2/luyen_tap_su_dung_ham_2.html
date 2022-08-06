@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 2</title>
+</head>
+<body>
+</body>
+<script>
+    //Bài 1:
+    // function numberSquare(number) {
+    //     let result = number * number;
+    //     alert('Kết quả là: ' + result);
+    //     return result;
+    //
+    // }
+    // let input = prompt('Nhập số cần bình phương: ')
+    // numberSquare(input);
+
+    //Bài 2:
+    // function areaCircle(radius) {
+    //     const pi = 3.14;
+    //     let areaCircle = radius * radius * pi;
+    //     alert('Diện tích hình tròn là: ' + areaCircle);
+    //     return areaCircle;
+    // }
+    // function perimeterCircle(radius) {
+    //     const pi = 3.14;
+    //     let perimeterCircle = 2 * radius * pi;
+    //     alert('Chu vi hình tròn là: ' + perimeterCircle);
+    //     return perimeterCircle;
+    // }
+    // let input = prompt('Nhập bán kính hình tròn: ');
+    // areaCircle(input);
+    // perimeterCircle(input);
+
+    //Bài 3:
+    // function calculateFactorial(number) {
+    //     let result = 1;
+    //     for (let i = 1; i <= number; i++) {
+    //         result *= i;
+    //     }
+    //     alert('Kết quả là: ' + result);
+    //     return result;
+    // }
+    // let input = prompt('Nhập số cần tính: ');
+    // calculateFactorial(input);
+
+    //Bài 4:
+    /*function checkNumber(isNumber) {
+        if (isNumber >= '0' && isNumber <= '9'){
+            alert('True')
+        }else {
+            alert('False')
+        }
+        return isNumber;
+    }
+    let input = prompt('Nhập ký tự: ');
+    checkNumber(input);
+    //nếu bắt đầu bằng chuỗi ký tự số trc chữ trả ra true VD: 333, 3e3e3e
+    //nếu bắt đầu bằng chuỗi ký tự chữ trc số trả ra false VD: eee, e3e3e
+    //chưa tối ưu*/
+
+    //Bài 5:
+    /*function comparisonValue(a, b, c) {
+        let max;
+        if (a > b && a > c){
+            max = a;
+            alert(a + ' là số lớn nhất');
+        }else if (b > c){
+            max = b;
+            alert(b + ' là số lớn nhất');
+        }else {
+            max = c;
+            alert(c + ' là số lớn nhất');
+        }
+        return max;
+    }
+    let inputA = parseFloat(prompt('Nhập giá trị số a:'));
+    let inputB = parseFloat(prompt('Nhập giá trị số b:'));
+    let inputC = parseFloat(prompt('Nhập giá trị số c:'));
+    comparisonValue(inputA, inputB, inputC);*/
+
+    //Bài 6:
+    /*function checkNumber(number) {
+        if (number > 0){
+            alert(number + ' là số nguyên dương');
+        }else {
+            alert(number + ' không phải là số nguyên dương');
+        }
+        return number;
+    }
+    let input = parseInt(prompt('Nhập số cần kiểm tra'));
+    checkNumber(input);*/
+
+    //Bài 7:
+    /*function convertLocation(a, b) {
+        let temp = a;
+        a = b;
+        b = temp;
+        document.write('Giá trị a sau khi chuyển đổi: ' + a + '<br>');
+        document.write('Giá trị b sau khi chuyển đổi: ' + b + '<br>');
+        return temp;
+    }
+    let inputA = parseInt(prompt('Nhập a: '));
+    let inputB = parseInt(prompt('Nhập b: '));
+    document.write('Giá trị a trước khi chuyển đổi: ' + inputA + '<br>');
+    document.write('Giá trị b trước khi chuyển đổi: ' + inputB + '<br>' + '<br>');
+    convertLocation(inputA, inputB);*/
+
+    //Bài 8:
+    /*function convertArray(arr) {
+        let arrNew = [];
+        let min = arr[0];
+        let max = arr[0];
+        let number = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr.length < min){
+                min = arr[i];
+            }
+        }
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr.length; j++) {
+                if (arr[j] > max){
+                    max = arr[j];
+                }
+            }
+            for (let j = 0; j < arr.length; j++) {
+                if (arr[j] == max){
+                    number = j;
+                }
+            }
+            arr[number] = min;
+            arrNew[arrNew.length] = max;
+            max = arr[0];
+        }
+        document.write('Mảng sau hoán đổi: ' + arrNew);
+        return arrNew;
+    }
+    let inputArr = [1,2,3,4];
+    document.write('Mảng trước hoán đổi: ' + inputArr + '<br>');
+    convertArray(inputArr);*/
+
+    //Bài 9:
+    function checkCharacter(isString) {
+        let arrayLocal = [a, f, c, 3, f, 5, c, 5, 3];
+        let count = 0;
+        alert('Mảng kiểm tra: ' + arrayLocal);
+
+        // for (let i = 0; i < arrayLocal.length; i++) {
+        //     if (arrayLocal[i] === isString){
+        //         count++;
+        //         document.write(isString + " có số lần lặp lại là: " + count);
+        //     }
+            // else {
+            //     document.write('-1');
+            // }
+        // }
+        // return count;
+    }
+    // let input = prompt('Nhập 1 ký tự cần kiểm tra: ');
+    checkCharacter();
+</script>
+</html>

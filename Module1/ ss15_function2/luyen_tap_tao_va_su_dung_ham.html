@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice</title>
+</head>
+<body>
+<script>
+    //Bài 1:
+    // function alertMessage() {
+    //     alert('Xin chào');
+    // }
+    // alertMessage()
+    //Bài 2:
+    // function alertArgument(a) {
+    //     a++;
+    //     alert('Giá trị của a: ' + a);
+    // }
+    // alertArgument(1);
+    //Bài 3:
+    // function alertValue(a, b) {
+    //     let sum = a + b;
+    //     if (a > b){
+    //         alert('Giá trị a lớn hơn giá trị b');
+    //     } else {
+    //         alert('Tổng 2 số là: ' + sum);
+    //     }
+    // }
+    // alertValue(prompt('Nhập a: '), prompt('Nhập b: '));
+    //Bài 4:
+    // function addNumbers() {
+    //     firstNum = 4;
+    //     secondNum = 8;
+    //     result = firstNum + secondNum;
+    //     alert('Kết quả result sau khi gọi hàm là: ' + result);
+    //     return result;
+    // }
+    // result = 0;
+    // alert('Kết quả result trước khi gọi hàm là: ' + result);
+    // result = addNumbers();
+    //Bài 5:
+    function inputArray(a) {
+        let arrStar = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus'];
+        let arrConstellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major' , 'Leo'];
+        let arrCheck = [];
+        let constellation = 0;
+        for (let i = 0; i < arrCheck.length; i++) {
+            if (arrCheck[i] === arrStar[i]){
+                constellation = arrConstellation[i];
+                return true;
+            }else {
+                return false;
+            }
+        }
+    }
+    function receiveValue() {
+        let a = prompt('Nhập tên chòm sao: ');
+        result = inputArray(a);
+        if (result == true){
+            document.write('Tên ngôi sao là ' + arrStar[i] + ' thuộc chòm sao ' + arrConstellation[i]);
+        }
+        if (result == false){
+            prompt('Không có ngôi sao bạn tìm!')
+        }
+    }
+    receiveValue()
+</script>
+</body>
+</html>
