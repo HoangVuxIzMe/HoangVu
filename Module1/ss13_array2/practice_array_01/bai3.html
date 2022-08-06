@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+</body>
+<script>
+    let arr = [1,2,5,4,6,6,7,8];
+    let max = arr[0];
+    let sum = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+    }
+    for (let j = 0; j < arr.length; j++) {
+        if (arr[j] > max){
+            max = arr[j];
+        }
+    }
+    document.write('Mảng đã cho: ' + arr + '<br>');
+    document.write('Giá trị trung bình của các phần tử trong mảng là: ' + (sum / arr.length) + '<br>');
+    document.write('Giá trị lớn nhất trong mảng: ' + max);
+</script>
+</html>
