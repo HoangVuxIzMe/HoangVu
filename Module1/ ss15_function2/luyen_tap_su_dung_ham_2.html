@@ -118,23 +118,24 @@
     // convertArray(inputArr);
 
     //Bài 9:
-    // function checkCharacter(isString) {
-    //     let arrayLocal = [a, f, c, 3, f, 5, c, 5, 3];
-    //     let count = 0;
-    //     alert('Mảng kiểm tra: ' + arrayLocal);
-    //
-    //     for (let i = 0; i < arrayLocal.length; i++) {
-    //         if (arrayLocal[i] === isString){
-    //             count++;
-    //             document.write(isString + " có số lần lặp lại là: " + count);
-    //         }
-    //         else {
-    //             document.write('-1');
-    //         }
-    //     }
-    //     return count;
-    // }
-    // let input = prompt('Nhập 1 ký tự cần kiểm tra: ');
-    // checkCharacter();
+    function checkCharacter(isString) {
+        let arrayLocal = ['a', 'f', 'c', '3', 'f', '5', 'c', '5', '3'];
+        let count = 0;
+        document.write('Mảng kiểm tra: ' + arrayLocal + '<br>');
+
+        for (let i = 0; i < arrayLocal.length; i++) {
+            if (isString === arrayLocal[i]){
+                count++;
+            }
+        }
+        if (count == 0 ){
+            document.write('-1');
+        }else {
+            document.write(isString + " có số lần lặp lại là: " + count);
+        }
+        return count;
+    }
+    let input = prompt('Nhập 1 ký tự cần kiểm tra: ');
+    checkCharacter(input);
 </script>
 </html>

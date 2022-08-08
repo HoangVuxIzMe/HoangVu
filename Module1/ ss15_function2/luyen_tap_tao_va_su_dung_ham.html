@@ -39,31 +39,20 @@
     // alert('Kết quả result trước khi gọi hàm là: ' + result);
     // result = addNumbers();
     //Bài 5:
-    function inputArray(a) {
         let arrStar = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus'];
         let arrConstellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major' , 'Leo'];
-        let arrCheck = [];
-        let constellation = 0;
-        for (let i = 0; i < arrCheck.length; i++) {
-            if (arrCheck[i] === arrStar[i]){
-                constellation = arrConstellation[i];
-                return true;
-            }else {
-                return false;
+
+    function receiveValue(a) {
+        for (let i = 0; i < arrStar.length; i++) {
+            if (a === arrStar[i]){
+                alert('Star: ' + arrStar[i] + ' Constellation: ' + arrConstellation[i]);
+                return a;
             }
         }
+
     }
-    function receiveValue() {
-        let a = prompt('Nhập tên chòm sao: ');
-        result = inputArray(a);
-        if (result == true){
-            document.write('Tên ngôi sao là ' + arrStar[i] + ' thuộc chòm sao ' + arrConstellation[i]);
-        }
-        if (result == false){
-            prompt('Không có ngôi sao bạn tìm!')
-        }
-    }
-    receiveValue()
+    let input = prompt('Nhap ten ngoi sao')
+    receiveValue(input)
 </script>
 </body>
 </html>
