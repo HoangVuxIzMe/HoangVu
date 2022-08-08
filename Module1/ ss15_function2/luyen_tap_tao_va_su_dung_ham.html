@@ -43,16 +43,21 @@
         let arrConstellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major' , 'Leo'];
 
     function receiveValue(a) {
-        for (let i = 0; i < arrStar.length; i++) {
-            if (a === arrStar[i]){
-                alert('Star: ' + arrStar[i] + ' Constellation: ' + arrConstellation[i]);
-                return a;
+            for (let i = 0; i < arrStar.length; i++) {
+                if (a === arrStar[i]){
+                    alert('Star: ' + arrStar[i] + ' - Constellation: ' + arrConstellation[i]);
+                    return true;
+                }
             }
-        }
-
+            return false;
     }
-    let input = prompt('Nhap ten ngoi sao')
-    receiveValue(input)
+    let check;
+    do {
+        let input = prompt('Nhap ten ngoi sao');
+        check = receiveValue(input);
+    }while (!check)
+
+
 </script>
 </body>
 </html>
