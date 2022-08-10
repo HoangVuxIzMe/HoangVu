@@ -6,7 +6,7 @@
 </head>
 <body>
 <h3>Add New Product</h3>
-<input type="text" value="New Product" id="inputProduct">
+<input type="text" id="inputProduct">
 <button style="background: limegreen" onclick="addProduct(arrProduct)">Add</button>
 <h3>Display All Product</h3>
 <h4>Product Name</h4>
@@ -25,10 +25,10 @@
                  '    </tr>';
         for (let i = 0; i < arrProduct.length; i++) {
             tb += '  <tr>\n' +
-                  '        <td>'+(i+1)+'</td>\n' +
-                  '        <td>'+arrProduct[i]+'</td>\n' +
-                  '        <td><button type="button" onclick="editProduct(' + i + ')">Edit</button></td>\n' +
-                  '        <td><button type="button" onclick="deleteProduct(' + i +')">Delete</button></td>\n' +
+                  '        <td style="text-align: center">'+(i+1)+'</td>\n' +
+                  '        <td style="text-align: center">'+arrProduct[i]+'</td>\n' +
+                  '        <td style="text-align: center"><button type="button" onclick="editProduct(' + i + ')">Edit</button></td>\n' +
+                  '        <td style="text-align: center"><button type="button" onclick="deleteProduct(' + i +')">Delete</button></td>\n' +
                   '    </tr>';
         }
         tb+='</table>';
@@ -45,7 +45,7 @@
         displayProduct(arrProduct);
     }
     function deleteProduct(index) {
-        arrProduct.splice(index - 1,1);
+        arrProduct.splice(index,1);
         displayProduct(arrProduct);
     }
 
