@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sản phẩm</title>
+</head>
+<body>
+<h3>Add New Product</h3>
+<input type="text" value="New Product" id="inputProduct">
+<button style="background: limegreen" onclick="addProduct(arrProduct)">Add</button>
+<h3>Display All Product</h3>
+<h4>Product Name</h4>
+<p id="result"></p>
+
+<script>
+    let arrProduct = [];
+    displayProduct(arrProduct)
+    function displayProduct(arrProduct) {
+        let tb = '<table border="1" width="50%">\n' +
+                 '    <tr>\n' +
+                 '        <th>STT</th>\n' +
+                 '        <th>Tên SP</th>\n' +
+                 '        <th>Edit</th>\n' +
+                 '        <th>Delete</th>\n' +
+                 '    </tr>';
+        for (let i = 0; i < arrProduct.length; i++) {
+            tb += '  <tr>\n' +
+                  '        <td>'+(i+1)+'</td>\n' +
+                  '        <td>'+arrProduct[i]+'</td>\n' +
+                  '        <td><button type="button" onclick="editProduct(' + i + ')">Edit</button></td>\n' +
+                  '        <td><button type="button" onclick="deleteProduct(' + i +')">Delete</button></td>\n' +
+                  '    </tr>';
+        }
+        tb+='</table>';
+        document.getElementById('result').innerHTML = tb;
+    }
+    function addProduct() {
+        let newProduct = document.getElementById('inputProduct').value;
+        arrProduct.push(newProduct);
+        displayProduct(arrProduct);
+    }
+    function editProduct(index) {
+        let editProduct = prompt('Nhập tên muốn sửa');
+        arrProduct[index] = editProduct;
+        displayProduct(arrProduct);
+    }
+    function deleteProduct(index) {
+        arrProduct.splice(index - 1,1);
+        displayProduct(arrProduct);
+    }
+
+</script>
+</body>
+</html>
