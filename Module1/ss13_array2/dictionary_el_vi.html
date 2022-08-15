@@ -11,14 +11,16 @@
     let wordVI = ['chào', 'đi', 'chạy', 'nhảy', '5 triệu'];
     let wordSearch = prompt('Nhập từ cần tìm');
 
-    for (let i = 0; i < wordEL.length ; i++) {
-        if (wordSearch === wordEL[i]) {
+    for (let i = 0; i < wordEL.length; i++) {
+        if (wordSearch === wordEL[i]){
             document.write(wordVI[i]);
         }
-        // else {
-        //     document.write('Không có trong từ điển')
-        //     break;
-        // }
+    }
+    for (let i = 0; i < wordEL.length ; i++) {
+        if (wordSearch != wordEL[i]) {
+            document.write('Không có trong từ điển');
+            break;
+        }
     }
 </script>
 </html>
