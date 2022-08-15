@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+</head>
+<body>
+<div id="game"></div>
+<script>
+    class Object_move{
+        //Hàm khởi tạo thuộc tính
+        constructor(image, top, left, size) {
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            this.size = size;
+        }
+        //Hàm tạo hành vi
+        getElement(){
+            return '<img width="'+ this.size + '"' +
+                ' height="'+ this.size + '"' +
+                ' src="' + this.image +'"' +
+                ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
+        }
+        moveRight(){
+            this.left += 100;
+        }
+        moveDown(){
+            this.top += 50;
+        }
+        moveTop(){
+            this.top -= 50;
+        }
+        moveLeft(){
+            this.left -= 100;
+        }
+
+    }
+    let hero = new Object_move('pikachu.png',20,30,200);
+
+    function start() {
+        if(hero.left < window.innerWidth - hero.size && hero.top === 20 ){
+            hero.moveRight();
+        }else if (hero.top < window.innerHeight - hero.size && hero.left > 30) {
+            hero.moveDown();
+        }else if (hero.left > 30){
+            hero.moveLeft();
+        }else if (hero.left > 20){
+            hero.moveTop();
+        }
+        document.getElementById('game').innerHTML = hero.getElement();
+        setTimeout(start, 500);
+    }
+    start();
+</script>
+</body>
+</html>

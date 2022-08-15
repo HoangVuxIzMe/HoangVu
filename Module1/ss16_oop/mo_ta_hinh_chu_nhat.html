@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô tả HCN</title>
+</head>
+<body>
+<canvas id="myCanvas" width="400" height="200" style="border: 1px solid #d3d3d3">Úm ba la xì bùa</canvas>
+<script>
+    class Rectangle{
+        // Hàm khởi tạo thuộc tính
+        constructor(length, width) {
+            this.length = length;
+            this.width = width;
+        }
+        // Hàm khởi tạo hành vi
+        getLength(){
+            return this.length;
+        }
+        getWidth(){
+            return this.width;
+        }
+        getPerimeter(){
+            return (length + width)*2;
+        }
+        getArea(){
+            return length*width;
+        }
+    }
+    let inputLength = prompt('Nhập chiều dài');
+    let inputWidth = prompt('Nhập chiều rộng');
+    let rectangle = new Rectangle(inputLength, inputWidth);
+    let length = rectangle.getLength();
+    let width = rectangle.getWidth();
+
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.fillRect(20,20,length,width);
+    ctx.stroke();
+
+    console.log('Chiều dài: ' + length);
+    console.log('Chiều rộng: ' + width);
+    console.log('Chu vi hình chữ nhật là: ' + rectangle.getPerimeter());
+    console.log('Diện tích hình chữ nhật là: ' + rectangle.getArea());
+
+</script>
+</body>
+</html>

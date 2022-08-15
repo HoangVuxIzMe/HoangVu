@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        // Hàm khai báo thuộc tính
+        constructor(temperature) {
+            this.temperature = temperature;
+        }
+        //Hàm tạo hành vi
+        getTemperature(){
+            return this.temperature;
+        }
+        getTemperatureF(){
+            return 9/5 * temperature + 32;
+        }
+        getTemperatureK(){
+            return temperature + 273.15;
+        }
+    }
+    //Khai báo biến
+    let inputTemperature = parseInt(prompt('Nhập nhiệt độ C'));
+    let temperatureC = new Temperature(inputTemperature);
+    let temperature = temperatureC.getTemperature();
+    //Chuyển đổi temperature
+    console.log('Nhiệt độ C: ' + temperature + ' C');
+    console.log('Nhiệt độ F: ' + temperatureC.getTemperatureF() + ' F');
+    console.log('Nhiệt độ K: ' + temperatureC.getTemperatureK() + ' K');
+</script>
+</body>
+</html>
