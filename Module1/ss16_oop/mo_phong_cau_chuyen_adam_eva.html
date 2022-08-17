@@ -11,39 +11,46 @@
             this.weight = weight;
         }
         decrease(){
-
-        }
-        isEmpty(){
-
+            this.weight--;
         }
         getWeight(){
             return this.weight;
         }
     }
-    class Human{
+    class Human {
         constructor(name, gender, weight) {
             this.name = name;
             this.gender = gender;
             this.weight = weight;
         }
-        isHuman(){}
-        setGender(gender){}
-        checkApple(){}
-        eatApple(){}
-        say(){}
-        getName(){
-            return this.name;
+        isHuman(check) {
+            if (check === 'Male' || check === 'Female') {
+                return true;
+            } else {
+                return false;
+            }
         }
-        setName(name){
-            this.name = nName;
+        checkApple(apple) {
+            return apple.weight;
         }
-        getWeight(){
+        eatApple(apple) {
+            apple.weight--;
+            this.weight++;
+        }
+        say() {
+            console.log("I'm " + this.name)
+        }
+        getWeight() {
             return this.weight;
         }
-        setWeight(){
-            this.weight = nWeight;
-        }
     }
+    let apple = new Apple(10);
+    let human1 = new Human("Adam","Male",50);
+    console.log("Kl táo: " + human1.checkApple(apple));
+    human1.say();
+    human1.eatApple(apple);
+    console.log("Kl táo sau khi bị ăn: " + human1.checkApple(apple));
+    console.log("Kl sau khi ăn táo: " + human1.getWeight());
 </script>
 </body>
 </html>

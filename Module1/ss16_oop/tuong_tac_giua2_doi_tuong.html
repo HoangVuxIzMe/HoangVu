@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Công tắc - Bóng đèn</title>
+</head>
+<body>
+<script>
+    class SwitchButton{
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+        connectToLamp(ElectricLamp){
+            this.lamp = ElectricLamp;
+        }
+        switchOff(){
+            this.lamp.turnOff();
+        }
+        switchOn(){
+            this.lamp.turnOn();
+        }
+    }
+    class ElectricLamp{
+        constructor(status) {
+            this.status = status;
+        }
+        turnOff(){
+            this.status = "OFF";
+            console.log("Trạng thái: " + this.status);
+        }
+        turnOn(){
+            this.status = "ON";
+            console.log("Trạng thái: " + this.status);
+        }
+    }
+
+    let lamp = new ElectricLamp();
+    let switchButton = new SwitchButton();
+    switchButton.connectToLamp(lamp);
+
+    for (let i = 1; i <= 10; i++) {
+        console.log("lần thứ " + i);
+        switchButton.switchOn();
+        switchButton.switchOff();
+    }
+</script>
+</body>
+</html>
