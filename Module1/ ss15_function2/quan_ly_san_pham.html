@@ -6,7 +6,7 @@
 </head>
 <body>
 <h3>Add New Product</h3>
-<input type="text" id="inputProduct">
+<input type="text" id="inputProduct" placeholder="Nhập sản phảm">
 <button style="background: limegreen" onclick="addProduct(arrProduct)">Add</button>
 <h3>Display All Product</h3>
 <h4>Product Name</h4>
@@ -38,6 +38,7 @@
         let newProduct = document.getElementById('inputProduct').value;
         arrProduct.push(newProduct);
         displayProduct(arrProduct);
+        document.getElementById('inputProduct').value = '';
     }
     function editProduct(index) {
         let editProduct = prompt('Nhập tên muốn sửa');

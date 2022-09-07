@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5: Menu</title>
+</head>
+<style>
+    body{
+        background-color: lightgrey;
+    }
+    td{
+        text-align: center;
+    }
+</style>
+<body>
+    <p id="menu"></p>
+    <label>Order</label><br>
+        <input type="number" id="input" placeholder="Nhập số">
+        <input type="button" onclick="order()" value="Order">
+    <p id="cost"></p>
+    <p id="result"></p>
+<script>
+    display()
+    function display() {
+        let menu = '<ol>\n' +
+            '    <h2>Menu đồ uống</h2><br>\n' +
+            '    <li>Cafe</li>\n' +
+            '    <li>Nước cam</li>\n' +
+            '    <li>Nước ép cà rốt</li>\n' +
+            '    <li>Nước ép cà chua</li>\n' +
+            '    <li>Nước lọc</li>\n' +
+            '    <li>Nước dừa</li>'
+        menu += '</ol>'
+        document.getElementById('menu').innerHTML = menu;
+    }
+    function order() {
+        let input = document.getElementById('input').value;
+        switch (input) {
+            case "1":
+                document.getElementById('cost').innerHTML = 'Giá tiền là: 10K'
+                break;
+            case "2":
+                document.getElementById('cost').innerHTML ='Giá tiền là: 20K'
+                break;
+            case "3":
+                document.getElementById('cost').innerHTML ='Giá tiền là: 25K'
+                break;
+            case "4":
+                document.getElementById('cost').innerHTML ='Giá tiền là: 25K'
+                break;
+            case "5":
+                document.getElementById('cost').innerHTML ='Giá tiền là: 5K'
+                break;
+            case "6":
+                document.getElementById('cost').innerHTML ='Giá tiền là: 15K'
+                break;
+        }
+        amount()
+    }
+    function amount() {
+        let amount = '<label>Amount</label><br>\n' +
+            '        <input type="number" id="" placeholder="Nhập số">'
+        document.getElementById('result').innerHTML = amount
+    }
+</script>
+</body>
+</html>

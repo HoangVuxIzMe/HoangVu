@@ -48,9 +48,13 @@
     let human1 = new Human("Adam","Male",50);
     console.log("Kl táo: " + human1.checkApple(apple));
     human1.say();
-    human1.eatApple(apple);
-    console.log("Kl táo sau khi bị ăn: " + human1.checkApple(apple));
-    console.log("Kl sau khi ăn táo: " + human1.getWeight());
+
+    for (let i = 1; i <= 10; i++){
+        console.log("Ăn lần " + i);
+        human1.eatApple(apple);
+        console.log("Kl táo sau khi bị ăn: " + human1.checkApple(apple));
+        console.log("Kl sau khi ăn táo: " + human1.getWeight());
+    }
 </script>
 </body>
 </html>

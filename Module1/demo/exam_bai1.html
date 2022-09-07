@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam1</title>
+</head>
+<body>
+<script>
+    let arr = [15, 2, 3, 5, 10, 15, 10, 8, 9, 10, 1, 4, 15, 1, 2, 35];
+    let sum = 0;
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 5 == 0 && i % 3 == 0) {
+            sum += arr[i];
+            count++;
+        }
+    }
+    console.log(count)
+    console.log(sum / count)
+</script>
+</body>
+</html>

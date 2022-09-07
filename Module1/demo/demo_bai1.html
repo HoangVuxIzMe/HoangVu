@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1: Hiển thị số có hàng đơn vị lớn hơn hàng chục</title>
+</head>
+<body>
+<script>
+    //Khai báo mảng số nguyên n
+    let arrNum = [];
+    let n = parseInt(prompt('Nhập số lượng số nguyên'));
+    //Nhập các ptu 11-99
+    for (let i = 0; i < n;) {
+        let index = parseInt(prompt('Nhập phần tử a[' + i + '] :'));
+        if (index > 10 & index < 100) {
+            arrNum.push(index);
+            i++;
+        } else {
+            alert('Nhập lại');
+        }
+    }
+    //Hiển thị mảng sau khi thêm
+    document.write('Mảng đã nhập: ' + arrNum.join(', ') + '<br>');
+    //Xử lý hàng đơn vị hàng chục
+    let arrNumNew = [];
+    for (let i = 0; i < arrNum.length; i++) {
+        let tens = parseInt(arrNum[i] / 10);
+        let units = arrNum[i] % 10;
+        if (units > tens) {
+            arrNumNew.push(arrNum[i]);
+        }
+    }
+    //Hiển thị
+    document.write('Mảng có hàng đơn vị lớn hơn hàng chục: ' + arrNumNew.join(', '));
+</script>
+</body>
+</html>

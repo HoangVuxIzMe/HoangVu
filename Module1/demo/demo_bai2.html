@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2: Ktr ký tự</title>
+</head>
+<body>
+<script>
+    //Khai báo biến nhập chuỗi
+    let inputStr = prompt('Nhập chuỗi');
+    //KHởi tạo hàm
+    function checkString(str) {
+        //Khai báo pattern tìm ký tự không phải số và chữ
+        let pattern = '^\\D*\\W$';
+        //Vòng lặp kiểm tra từng ký tự trong chuỗi
+        for (let i = 0; i < str.length; i++) {
+            //Nếu tìm thấy ký tự bắt đc ký tự đặc biệt thì trả ra kq
+            if (str.charAt(i).match(pattern)) {
+                console.log(str.charAt(i));
+            }
+        }
+    }
+    checkString(inputStr)
+</script>
+</body>
+</html>

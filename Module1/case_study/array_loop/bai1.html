@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prefix Sum</title>
+</head>
+<body>
+<script>
+    //Tạo mảng nhập từ bàn phím
+    let n = prompt('Nhập số phần tử trong mảng')
+    let array = [];
+    for (let i = 0; i <= n -1; i++) {
+        let index = Number(prompt('Nhập phần tử a[' + i + ']'));
+        array.push(index);
+    }
+    console.log(array)
+    //Prefix sums
+    let sum = 0;
+    let arrPrefixSums = [];
+    for (let i = 0; i < array.length; i++) {
+        sum = sum + array[i];
+        arrPrefixSums.push(sum);
+    }
+    console.log(arrPrefixSums);
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2: Tìm phần tử</title>
+</head>
+<body>
+<script>
+    //Tạo mảng 1 nhập từ bàn phím
+    let n1 = prompt('Nhập số phần tử trong mảng')
+    let arr1 = [];
+    for (let i = 0; i < n1; i++) {
+        let index = Number(prompt('Nhập phần tử a[' + i + ']'));
+        arr1.push(index);
+    }
+    console.log(arr1)
+    //Tạo mảng 2 nhập từ bàn phím
+    let n2 = prompt('Nhập số phần tử trong mảng')
+    let arr2 = [];
+    for (let i = 0; i < n2; i++) {
+        let index = Number(prompt('Nhập phần tử a[' + i + ']'));
+        arr2.push(index);
+    }
+    console.log(arr2)
+    let missingValue = [];
+    //Ktr mảng sd hàm
+    // for (let i = 0; i < arr2.length; i++) {
+    //     if (arr2[i] != arr1[i]){
+    //         missingValue.push(arr2[i]);
+    //         arr2.splice(i,1);
+    //         i--
+    //     }
+    // }
+    // console.log(missingValue)
+
+    //Ktr mảng k hàm
+    let flag = true;
+    for (let i = 0; i < arr2.length; i++) {
+        for (let j = 0; j < arr1.length; j++) {
+            if (arr2[i] == arr1[j]){
+                flag = false;
+                break;
+            }else flag = true;
+        }
+        if (flag){
+            missingValue.push(arr2[i]);
+        }
+    }
+    console.log(missingValue);
+</script>
+</body>
+</html>

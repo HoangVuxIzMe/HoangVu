@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1: Thuế thu nhập</title>
+</head>
+<body>
+<script>
+    let inputSalaryStaff = Number(prompt('Nhập số lương của nhân viên (Triệu đồng)'));
+    let result = 0;
+    if (inputSalaryStaff >= 15){
+        result = inputSalaryStaff*0.2;
+    }else if(inputSalaryStaff > 7 && inputSalaryStaff < 15){
+        result = inputSalaryStaff*0.1;
+    }else {
+        result = inputSalaryStaff*0.05;
+    }
+    console.log('Thuế thu nhập của bạn là: ' + result + ' Tr VND');
+    console.log('Số tiền lương của bạn là: ' + (inputSalaryStaff-result) + ' Tr VND')
+</script>
+</body>
+</html>

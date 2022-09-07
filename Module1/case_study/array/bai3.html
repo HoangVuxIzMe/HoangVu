@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm max min</title>
+</head>
+<body>
+<script>
+    let m = parseInt(prompt('Nhập m độ dài mảng'));
+    let n = parseInt(prompt('Nhập n số phần tử trong mảng'));
+
+    function findMaxMin(m, n) {
+        let arr = new Array(m * n);
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = new Array(m)
+            for (let j = 0; j < arr[i].length; j++) {
+                arr[i][j] = parseInt(prompt('Nhập phần tử a[' + i + '][' + j + ']'));
+            }
+        }
+        console.log(arr);
+        let max = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] > max) {
+                    max = arr[i][j];
+                }
+            }
+        }
+        let min = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] < min) {
+                    min = arr[i][j];
+                }
+            }
+        }
+        console.log('Max là  ' + max);
+        console.log('Max là  ' + min);
+    }
+
+    findMaxMin(m, n)
+</script>
+</body>
+</html>

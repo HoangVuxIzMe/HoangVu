@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2: Liệt kê các số nguyên tố</title>
+</head>
+<body>
+<script>
+    let m = parseInt(prompt('Nhập m độ dài mảng'));
+    let n = parseInt(prompt('Nhập n số phần tử trong mảng'));
+
+    function primes(input) {
+        if (input < 2) {
+            return false;
+        } else {
+            for (let i = 2; i < input; i++) {
+                if (input % i == 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    function countPrimes(m, n) {
+        let arr = new Array(m * n);
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = new Array(m)
+            for (let j = 0; j < arr[i].length; j++) {
+                arr[i][j] = parseInt(prompt('Nhập phần tử a[' + i + '][' + j + ']'));
+            }
+        }
+        console.log(arr);
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (primes(arr[i][j])) {
+                    count++;
+                    console.log('Các số nguyên tố là ' + arr[i][j]);
+                }
+            }
+        }
+        console.log('Đếm ' + count);
+    }
+
+    countPrimes(m, n)
+</script>
+</body>
+</html>

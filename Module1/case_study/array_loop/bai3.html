@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3: Tìm phân số</title>
+</head>
+<body>
+<script>
+    let numerators = [5, 2, 5]
+    let denominators = [6, 3, 4]
+    let array = []
+    for (let i = 0; i < numerators.length; i++) {
+        array.push(numerators[i] / denominators[i]);
+    }
+    console.log(array)
+    let max
+    let index
+    for (let i = 0; i < array.length; i++) {
+        if (array[i + 1] > array[i]) {
+            max = array[i + 1];
+            index = i+ 1;
+        }else {
+            max = array[i];
+            index = i;
+        }
+    }
+    console.log('PS lớn nhất: ' + max + ' Chỉ số: ' + index)
+</script>
+</body>
+</html>

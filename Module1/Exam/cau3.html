@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 3</title>
+    <link rel="stylesheet" href="stylecss.css">
+</head>
+<body>
+<input type="text" id="id" placeholder="Nhập mã sổ">
+<input type="text" id="type" placeholder="Nhập loại tiết kiệm">
+<input type="text" id="name" placeholder="Nhập tên">
+<input type="number" id="cmnd" placeholder="Nhập CMND/CCCD">
+<input type="date" id="date" placeholder="Nhập ngày sinh">
+<input type="number" id="money" placeholder="Nhập số tiền gửi">
+<button type="button" onclick="addCustomer()">Save</button>
+<p id="result"></p>
+<script>
+    //Mảng khởi tạo
+    let customerList = [];
+
+    //Hàm hiển thị
+    display(customerList);
+
+    function display(list) {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>ID</th>\n' +
+            '        <th>Loại Tiết Kiệm</th>\n' +
+            '        <th>Họ và tên</th>\n' +
+            '        <th>CMND/CCCD</th>\n' +
+            '        <th>Ngày mở sổ</th>\n' +
+            '        <th>Số tiền gửi</th>\n' +
+            '        <th>EDIT</th>\n' +
+            '        <th>DELETE</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < list.length; i++) {
+            tableString += '<tr>\n' +
+                '        <th>' + (i + 1) + '</th>\n' +
+                '        <th>' + list[i].getId() + '</th>\n' +
+                '        <th>' + list[i].getType() + '</th>\n' +
+                '        <th>' + list[i].getName() + '</th>\n' +
+                '        <th>' + list[i].getCmnd() + '</th>\n' +
+                '        <th>' + list[i].getDate() + '</th>\n' +
+                '        <th>' + list[i].getMoney() + '</th>\n' +
+                '        <th><button type="button" onclick="editCustomer(' + i + ')">EDIT</button></th>\n' +
+                '        <th><button type="button" onclick="deleteCustomer(' + i + ')">DELETE</button></th>\n' +
+                '    </tr>';
+        }
+        tableString += '</table>';
+        document.getElementById('result').innerHTML = tableString;
+    }
+
+    //Lớp SOTIETKIEM
+    class SoTietKiem {
+        constructor(id, type, name, cmnd, date, money) {
+            this.id = id;
+            this.type = type;
+            this.name = name;
+            this.cmnd = cmnd;
+            this.date = date;
+            this.money = money;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setType(type) {
+            this.type = type;
+        }
+
+        setCmnd(cmnd) {
+            this.cmnd = cmnd;
+        }
+
+        setDate(date) {
+            this.date = date;
+        }
+
+        setMoney(money) {
+            this.money = money;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        getType() {
+            return this.type;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getCmnd() {
+            return this.cmnd;
+        }
+
+        getDate() {
+            return this.date;
+        }
+
+        getMoney() {
+            return this.money;
+        }
+    }
+
+    //Hàm thêm khách hàng
+    function addCustomer() {
+        let id = document.getElementById('id').value;
+        let type = document.getElementById('type').value;
+        let name = document.getElementById('name').value;
+        let cmnd = document.getElementById('cmnd').value;
+        let date = document.getElementById('date').value;
+        let money = document.getElementById('money').value;
+        let newCustomer = new SoTietKiem(id, type, name, cmnd, date, money);
+        customerList.push(newCustomer);
+        display(customerList);
+        document.getElementById('id').value = '';
+        document.getElementById('type').value = '';
+        document.getElementById('name').value = '';
+        document.getElementById('cmnd').value = '';
+        document.getElementById('date').value = '';
+        document.getElementById('money').value = '';
+    }
+
+    //Hàm xóa thông tin khách hàng
+    function deleteCustomer(index) {
+        let conf = confirm('Bạn có muốn xóa STT ' + (index + 1) + ' không?');
+        if (conf) {
+            customerList.splice(index, 1);
+            display(customerList);
+        } else {
+            display(customerList);
+        }
+    }
+
+    //Hàm sửa đổi thông tin khách hàng
+    function editCustomer(index) {
+        let newId = prompt('Nhập id mới');
+        let newType = prompt('Nhập loại tiết kiệm mới');
+        let newName = prompt('Nhập họ và tên mới');
+        let newCmnd = prompt('Nhập CMND/CCCD mới');
+        let newDate = prompt('Nhập ngày/thàng/năm mới');
+        let newMoney = prompt('Nhập số tiền gửi mới');
+        customerList[index].setId(newId);
+        customerList[index].setType(newType);
+        customerList[index].setName(newName);
+        customerList[index].setCmnd(newCmnd);
+        customerList[index].setDate(newDate);
+        customerList[index].setMoney(newMoney);
+        display(customerList);
+    }
+</script>
+</body>
+</html>

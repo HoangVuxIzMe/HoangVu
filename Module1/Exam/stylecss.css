@@ -1,0 +1,24 @@
+button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 10px;
+    margin: 8px;
+    border: none;
+    border-radius: 4px;
+}
+input{
+    padding: 8px 10px;
+    margin: 8px;
+    border-radius: 4px;
+}
+table{
+    border-collapse: collapse ;
+    border: none;
+    width: 100% ;
+    text-align: center;
+}
+tr:nth-child(odd):not(:first-child){
+    border: none;
+    background-color: lightgrey;
+}

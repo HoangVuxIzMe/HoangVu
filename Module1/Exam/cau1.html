@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 1</title>
+</head>
+<body>
+<script>
+    // Khai báo biến nhập số nguyên từ bàn phím và mảng a,b
+    let arrA = [];
+    let arrB = [];
+    let size = parseInt(prompt('Nhập số lượng số nguyên'));
+    // Nhập index và hiển thị mảng A
+    for (let i = 0; i < 50;) {
+        let index = parseInt(prompt('Nhập phần tử a[' + i + '] :'));
+        if (index <= 50) {
+            arrA.push(index);
+            i++;
+        } else {
+            alert('Nhập lại');
+        }
+    }
+    document.write('Mảng A: ' + arrA +'<br>');
+    // Hiển thị mảng B
+
+    for (let i = 0; i < arrA.length; i++) {
+        let flag = true;
+        for (let j = 2; j < arrA[i]; j++) {
+            if (arrA[i] % j == 0) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            arrB.push(arrA[i]);
+        }
+    }
+    document.write('Mảng B: ' + arrB);
+
+</script>
+</body>
+</html>

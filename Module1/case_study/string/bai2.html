@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let string = prompt('input string');
+    let stringArr = [];
+    let char = [];
+    for (let i = 0; i < string.length; i++) {
+        stringArr[i] = string.charAt(i);
+    }
+    char[0] = stringArr[0];
+    for (let i = 1; i < stringArr.length; i++) {
+        if (stringArr[i - 1] == stringArr[i]) {
+            stringArr.splice(i, 1);
+            i--;
+        }
+    }
+    for (let i = 1; i < string.length; i++) {
+        for (let j = stringArr.length - 1; j >= 0; j--) {
+            if (char[i - 1] == stringArr[j]) {
+                stringArr.splice(j, 1)
+            }
+        }
+        char.push(stringArr[i])
+    }
+    for (let i = 0; i < stringArr.length; i++) {
+        char.push(stringArr[i]);
+    }
+    for (let i = 0; i < char.length; i++) {
+        if (char[i] == undefined) {
+            char.splice(i, 1);
+            i--;
+        }
+    }
+    console.log(char);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let s1 = "aabcc";
+    let s2 = "adcaa";
+    function commonCharacterCount(s1,s2) {
+        let count = 0;
+        for (let i = 0; i < s1.length; i++) {
+            for (let j = 0; j < s2.length; j++) {
+                if(s1[i] == s2[j]){
+                    count++;
+                }
+            }
+        }
+        return console.log(count/2)
+    }
+    commonCharacterCount(s1,s2);
+</script>
+</body>
+</html>
